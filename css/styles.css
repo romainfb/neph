@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+.h-90vh{
+    height: 90vh;
+}
+
+.font-title{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.font-description{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.font-800{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.font-600{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.font-500{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+#searchdiv{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#searchdiv.hide{
+  opacity: 0;
+}

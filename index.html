@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEPHCheck - Vérification de NEPH</title>
+    <!--<link href="https://unpkg.com/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="./css/styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+</head>
+<body onload="remplirListeAnnees(); remplirListeMois(); remplirListeDepartements();" class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+
+    <!-- Header transparent -->
+
+    <div class="onepage h-screen">
+
+        <header class="top-0 left-0 w-full">
+          <nav class="p-6 bg-transparent shadow-xl">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
+              <div class="flex items-center px-2 justify-between">
+                <div class="flex items-center ">
+                  <a class="text-lg text-black font-title font-bold hover:text-gray-400" href="#">NEPHCheck</a>
+                </div>
+                <div class="hidden md:block">
+                  <a class="text-black font-title text-lg font-bold hover:text-gray-400 mx-3" href="#">Github</a>
+                  <a class="text-black font-title text-lg font-bold hover:text-gray-400 mx-3" href="#">Twitter</a>
+                  <a class="text-black font-title text-lg font-bold hover:text-gray-400 mx-3" href="#">Instagram</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!-- Contenu -->
+        <main >
+          <div class="relative">
+
+            <div class="mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row h-90vh justify-none lg:justify-center">
+                <div class="w-full lg:w-1/2 p-2 md:p-20 py-10">
+                    <div class="mx-auto w-full bg-white shadow-lg mb-20 rounded-lg">
+
+                        <h2 class="mx-auto text-2xl font-title text-center py-6">NEPHCheck</h2>
+
+                        <form class="form-select block w-full border rounded py-8 px-10 xl:px-20 text-black leading-tight focus:outline-none focus:shadow-outline p-20">
+
+                            <label for="annee" class="text-xl font-500">Année de demande :</label>
+
+                            <select id="annees" name="annee" class="my-4 mb-4 form-select block w-full border rounded py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"></select>
+
+
+                            <label for="mois" class="text-xl font-500">Mois de demande :</label>
+
+                            <select id="lesMois" name="lesMois" class="my-4 mb-4 form-select block w-full border rounded py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"></select>
+
+                            <label for="departement" class="text-xl font-500">Département de résidence :</label>
+
+                            <select id="departements" name="departements" class="my-4 mb-4 form-select block w-full border rounded py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"></select>
+
+
+                            <label for="neph" class="text-xl font-500">Numéro NEPH :</label>
+
+                            <input required type="text" id="neph" name="neph" class="my-4 mb-10 form-input block w-full border rounded py-4 px-3 leading-tight focus:outline-none focus:shadow-outline">
+
+                            <button type="button" class="text-xl border-2 border-black rounded-md py-2 px-4 font-600 hover:bg-black hover:text-white cursor-pointer duration-300 w-full" onclick="verifierNEPH(); ">Vérifier</button>
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:pt-20 pb-20 px-10" id="searchdiv">
+                    <div class="mx-auto w-full h-full rounded-lg">
+                        <h2 class="lg:pt-16 font-title text-5xl font-title" id="searchtitle">Effectuez une recherche de numéro pour vérifier sa validité !</h2>
+                        <h3 class="pt-12 font-title text-3xl font-500" id="resultat"><strong>Faites attention,</strong> en cas de réponse négative, consultez des services compétents !</h3>
+                        <p class="pt-4 font-title text-xl font-500" id="subresultat"><strong>Le saviez-vous ?</strong> L'utilisation frauduleuse d'un document administratif est un délit passible d'une amende pouvant aller jusqu'à 15 000 euros et d'une peine d'emprisonnement pouvant aller jusqu'à 3 ans.</p>
+                        <div id="logoresult" class="mt-10 text-center"></div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </main>
+
+    </div>
+
+  <script type="text/javascript" src="./js/scripts.js"></script>
+</body>
+</html>
